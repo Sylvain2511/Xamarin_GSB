@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Antibiotiques" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="600"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+        
+        <StackLayout Grid.Row="0">
+            
+            <Label Text="Voici les antibiotiques :" />
+            <ListView x:Name="lvAntibiotiques" ItemTapped="lvAntibiotiques_ItemTapped"/>
+                <StackLayout>
+                    <Label IsVisible="False" Text="Entrez votre poids en Kg :" x:Name="txtEntPoids"/>
+                    <Entry IsVisible="False" BackgroundColor="LightGray" x:Name="entPoids"/>
+                    <Button IsVisible="False" BackgroundColor="DeepSkyBlue" x:Name="btnPoids" Text="Afficher la prescription" Clicked="btnPoids_Clicked"/>
+                    <Label IsVisible="False" x:Name="txtPrescription"/>
+                    <!--<Label IsVisible="False" x:Name="txtNbAntibioParPrise"/>-->
+                </StackLayout>
+        </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
